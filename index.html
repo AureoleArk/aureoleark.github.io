@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+</head>
+
+<body>
+	<section class="hero is-info is-medium">
+		<div class="hero-header">
+			<header class="header">
+				<div class="container">
+					<div class="header-left"></div>
+					<span id="header-toggle" class="header-toggle">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+					<div id="header-menu" class="header-right header-menu">
+						<span class="header-item">
+							<a class="button is-success is-inverted" href="https://ppn.pw" target="_blank">Arksoft</a>
+						</span>
+						<span class="header-item">
+							<a class="button is-info is-inverted" href="https://twitter.com/netman1221" target="_blank">Twitter</a>
+						</span>
+					</div>
+				</div>
+			</header>
+		</div>
+		<div class="hero-content">
+			<div class="container">
+				<h1 class="title">Profile</h1>
+				<h2 class="subtitle">aureole.github.io.git</h2>
+			</div>
+		</div>
+	</section>
+	<section class="hero is-dark is-bold">
+		<div class="hero-content">
+			<div class="container">
+				<nav class="navbar">
+					<div class="navbar-item is-text-centered">
+						<p class="heading">画像共有サービス</p>
+						<a class="button is-large" href="https://ppn.pw/i/">CorkBoard</a>
+					</div>
+					<div class="navbar-item is-text-centered">
+						<p class="heading">URL短縮サービス</p>
+						<a class="button is-large" href="https://ppn.pw/url.php">ArkShort</a>
+					</div>
+					<div class="navbar-item is-text-centered">
+						<p class="heading">osu!Signature generator</p>
+						<a class="button is-large" href="https://sig.ppn.pw/">シグジェネ</a>
+					</div>
+					<div class="navbar-item is-text-centered">
+						<p class="heading">サーバー情報</p>
+						<a class="button is-large" href="https://s.ppn.pw/">Status</a>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="heading">
+				<h1 class="title">私について</h1>
+				<h2 class="subtitle">Webデザイナーやマルチメディアクリエイター等色々な物に足を突っ込んでいる人。<br />
+				一気に色々やりすぎてどれも中途半端な感じです。<br />
+				文章での一人称は「村上さん」が多い気がします。
+				</h2></div>
+		</div>
+	</section>
+	<section class="section">
+		<div class="container">
+			<div class="heading">
+				<iframe src="https://beta.ppn.pw/n/update.php" width="100%"></iframe>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="container">
+			<div class="content is-centered">
+				<p>Copyright 2014-2016<strong>Arksoft</strong>All Rights Reserved.</p><img src="//cdn.ppn.pw/images/df.png" alt="DMCA.com Protection Status" />
+				<a href="https://sites.google.com/site/happybusy/" target="_blank"><img src="//cdn.ppn.pw/images/hbb.png" /></a>
+			</div>
+		</div>
+	</footer>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+	<script>
+		jQuery(document).ready(function($) {
+			var $toggle = $('#header-toggle');
+			var $menu = $('#header-menu');
+			$toggle.click(function() {
+				$(this).toggleClass('is-active');
+				$menu.toggleClass('is-active')
+			});
+			$('.modal-button').click(function() {
+				var target = $(this).data('target');
+				$('html').addClass('has-modal-open');
+				$(target).addClass('is-active')
+			});
+			$('.modal-background, .modal-close').click(function() {
+				$('html').removeClass('has-modal-open');
+				$(this).parent().removeClass('is-active')
+			});
+		});
+	</script>
+</body>
+
+</html>
